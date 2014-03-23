@@ -127,7 +127,6 @@ class Features(models.Model):
     Field = models.IntegerField,
     PicnicTable = models.IntegerField,
     Bathrooms = models.IntegerField,
-    Bathrooms = models.IntegerField,
     ChangingStation = models.IntegerField,
     Shade = models.IntegerField,
     BasketballCourt = models.IntegerField,

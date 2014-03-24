@@ -1,5 +1,5 @@
 
-this is the playground-finder
+As you can see, his is the playground-finder
 =================
 Class assigment for UNC jSchool 583 Advanced Media Programing
 

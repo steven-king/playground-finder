@@ -1,0 +1,67 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.TransportationFeatures",
+        "fields": {
+            "PlaygroundID": 0,
+            "BikePath": true,
+            "HikingTrail": false,
+            "AdjacentParking": true,
+            "NearbyParking": false,
+            "NoParking": false,
+            "ProximityToBus": 3
+        }
+    },
+    {
+        "pk": 2,
+        "model": "playgroundApp.TransportationFeatures",
+        "fields": {
+            "PlaygroundID": 1,
+            "BikePath": false,
+            "HikingTrail": true,
+            "AdjacentParking": false,
+            "NearbyParking": true,
+            "NoParking": true,
+            "ProximityToBus": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "playgroundApp.TransportationFeatures",
+        "fields": {
+            "PlaygroundID": 2,
+            "BikePath": false,
+            "HikingTrail": false,
+            "AdjacentParking": false,
+            "NearbyParking": false,
+            "NoParking": true,
+            "ProximityToBus": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "playgroundApp.TransportationFeatures",
+        "fields": {
+            "PlaygroundID": 3,
+            "BikePath": false,
+            "HikingTrail": true,
+            "AdjacentParking": false,
+            "NearbyParking": false,
+            "NoParking": false,
+            "ProximityToBus": 3
+        }
+    },
+    {
+        "pk": 5,
+        "model": "playgroundApp.TransportationFeatures",
+        "fields": {
+            "PlaygroundID": 4,
+            "BikePath": false,
+            "HikingTrail": false,
+            "AdjacentParking": true,
+            "NearbyParking": false,
+            "NoParking": false,
+            "ProximityToBus": 4
+        }
+    }
+]

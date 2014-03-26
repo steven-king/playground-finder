@@ -2,23 +2,23 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    UserID = models.CharField(unique=True, null=False, max_length=200),
-    Name = models.CharField(null=False),
-    Description = models.TextField,
-    Zipcode = models.IntegerField,
-    Age = models.IntegerField,
-    isWorkingMom = models.BooleanField,
-    isWorkingDad = models.BooleanField,
-    isStayMom = models.BooleanField,
-    isStayDad = models.BooleanField,
-    isGrandma = models.BooleanField,
-    isOther = models.BooleanField,
-    FavoritesID = models.IntegerField,
-    Image = models.TextField,
+    UserID = models.IntegerField(unique=True, null=False)
+    Name = models.CharField(null=False, max_length=200)
+    Description = models.TextField()
+    Zipcode = models.IntegerField(null=True)
+    Age = models.IntegerField(null= True)
+    isWorkingMom = models.BooleanField()
+    isWorkingDad = models.BooleanField()
+    isStayMom = models.BooleanField()
+    isStayDad = models.BooleanField()
+    isGrandma = models.BooleanField()
+    isOther = models.BooleanField()
+    FavoritesID = models.IntegerField(null=True)
+    Image = models.TextField()
 
     class Meta(object):
         verbose_name_plural = "Users"
-        #ordering = ('UserID',)
+        #ordering = ('userID',)
     def __unicode__(self):
         return self.UserID
     def save(self, *args, **kwargs):
@@ -26,21 +26,21 @@ class User(models.Model):
         super(User, self).save(*args, **kwargs)
 
 class Playground(models.Model):
-    PlaygroundID = models.IntegerField(unique=True, null=False),
-    Name = models.TextField,
-    Street = models.TextField,
-    Zipcode = models.IntegerField,
-    Handicap = models.BooleanField,
-    AgeID = models.IntegerField,
-    SchoolDistrictID = models.IntegerField,
-    Hours = models.TextField,
-    isCertified = models.BooleanField,
-    FeaturesID = models.IntegerField,
-    Image = models.TextField,
-    SafetyFeaturesID = models.IntegerField,
-    TransportFeaturesID = models.IntegerField,
-    GeoCoordinateLat = models.IntegerField,
-    GeoCoordinateLon = models.IntegerField,
+    PlaygroundID = models.IntegerField(unique=True, null=False)
+    Name = models.TextField
+    Street = models.TextField
+    Zipcode = models.IntegerField
+    Handicap = models.BooleanField
+    AgeID = models.IntegerField
+    SchoolDistrictID = models.IntegerField
+    Hours = models.TextField
+    isCertified = models.BooleanField
+    FeaturesID = models.IntegerField
+    Image = models.TextField
+    SafetyFeaturesID = models.IntegerField
+    TransportFeaturesID = models.IntegerField
+    GeoCoordinateLat = models.IntegerField
+    GeoCoordinateLon = models.IntegerField
 
     class Meta(object):
         verbose_name_plural = "Playgrounds"
@@ -52,13 +52,13 @@ class Playground(models.Model):
         super(Playground, self).save(*args, **kwargs)
 
 class SchoolDistrict(models.Model):
-    SchoolDistrictID = models.IntegerField(unique=True, null=False),
-    DistrictName = models.TextField,
-    ZipcodeStart = models.IntegerField,
-    ZipcodeEnd = models.IntegerField,
+    SchoolDistrictID = models.IntegerField(unique=True, null=False)
+    DistrictName = models.TextField
+    ZipcodeStart = models.IntegerField
+    ZipcodeEnd = models.IntegerField
     #I am not sure if we need GeoCoordinates or how to model them. Want to be able
     #to have the area on a map that a school district covers. GeoCodes the best way?
-    GeoCoordinates = models.IntegerField,
+    GeoCoordinates = models.IntegerField
 
     class Meta(object):
         verbose_name_plural = "School Districts"
@@ -70,14 +70,14 @@ class SchoolDistrict(models.Model):
         super(SchoolDistrict, self).save(*args, **kwargs)
 
 class Age(models.Model):
-    AgeID = models.IntegerField(unique=True, null=False),
-    ZeroTwo = models.BooleanField,
-    TwoFour = models.BooleanField,
-    FourSix = models.BooleanField,
-    SixEight = models.BooleanField,
-    EightTen = models.BooleanField,
-    TenTwelve = models.BooleanField,
-    TwelveFourteen = models.BooleanField,
+    AgeID = models.IntegerField(unique=True, null=False)
+    ZeroTwo = models.BooleanField
+    TwoFour = models.BooleanField
+    FourSix = models.BooleanField
+    SixEight = models.BooleanField
+    EightTen = models.BooleanField
+    TenTwelve = models.BooleanField
+    TwelveFourteen = models.BooleanField
 
     class Meta(object):
         verbose_name_plural = "Ages"
@@ -89,9 +89,9 @@ class Age(models.Model):
         super(Age, self).save(*args, **kwargs)
 
 class School(models.Model):
-    SchoolID = models.IntegerField(unique=True, null=False),
-    Name = models.TextField,
-    SchoolDistrictID = models.IntegerField(unique=False),
+    SchoolID = models.IntegerField(unique=True, null=False)
+    Name = models.TextField
+    SchoolDistrictID = models.IntegerField(unique=False)
 
     class Meta(object):
         verbose_name_plural = "Schools"
@@ -103,11 +103,11 @@ class School(models.Model):
         super(School, self).save(*args, **kwargs)
 
 class UserReview(models.Model):
-    ReviewID = models.IntegerField(unique=True, null=False),
-    PlaygroundID = models.IntegerField(null=False),
-    UserID = models.CharField(max_length=200),
-    Stars = models.IntegerField,
-    Review = models.CharField(max_length=1000),
+    ReviewID = models.IntegerField(unique=True, null=False)
+    PlaygroundID = models.IntegerField(null=False)
+    UserID = models.CharField(max_length=200)
+    Stars = models.IntegerField
+    Review = models.CharField(max_length=1000)
 
     class Meta(object):
         verbose_name_plural = "User Reviews"
@@ -120,17 +120,17 @@ class UserReview(models.Model):
 
 class Features(models.Model):
     PlaygroundID = models.IntegerField(unique=True, null=False),
-    Swing = models.IntegerField,
-    Slide = models.IntegerField,
-    MonkeyBars = models.IntegerField,
-    SandBox = models.IntegerField,
-    Field = models.IntegerField,
-    PicnicTable = models.IntegerField,
-    Bathrooms = models.IntegerField,
-    ChangingStation = models.IntegerField,
-    Shade = models.IntegerField,
-    BasketballCourt = models.IntegerField,
-    Baseball = models.IntegerField,
+    Swing = models.IntegerField
+    Slide = models.IntegerField
+    MonkeyBars = models.IntegerField
+    SandBox = models.IntegerField
+    Field = models.IntegerField
+    PicnicTable = models.IntegerField
+    Bathrooms = models.IntegerField
+    ChangingStation = models.IntegerField
+    Shade = models.IntegerField
+    BasketballCourt = models.IntegerField
+    Baseball = models.IntegerField
 
     class Meta(object):
         verbose_name_plural = "Features"
@@ -142,9 +142,9 @@ class Features(models.Model):
         super(Features, self).save(*args, **kwargs)
 
 class SafetyFeatures(models.Model):
-    PlaygroundID = models.IntegerField(unique=True, null=False),
-    ProximityToHighway = models.IntegerField,
-    Fenced = models.BooleanField,
+    PlaygroundID = models.IntegerField(unique=True, null=False)
+    ProximityToHighway = models.IntegerField
+    Fenced = models.BooleanField
 
     class Meta(object):
         verbose_name_plural = "Safety Features"
@@ -156,13 +156,13 @@ class SafetyFeatures(models.Model):
         super(SafetyFeatures, self).save(*args, **kwargs)
 
 class TransportationFeatures(models.Model):
-    PlaygroundID = models.IntegerField(unique=True, null=False),
-    BikePath = models.BooleanField,
-    HikingTrail = models.BooleanField,
-    AdjacentParking = models.BooleanField,
-    NearbyParking = models.BooleanField,
-    NoParking = models.BooleanField,
-    ProximityToBus = models.IntegerField,
+    PlaygroundID = models.IntegerField(unique=True, null=False)
+    BikePath = models.BooleanField
+    HikingTrail = models.BooleanField
+    AdjacentParking = models.BooleanField
+    NearbyParking = models.BooleanField
+    NoParking = models.BooleanField
+    ProximityToBus = models.IntegerField
 
     class Meta(object):
         verbose_name_plural = "Transportation Features"
@@ -174,11 +174,11 @@ class TransportationFeatures(models.Model):
         super(TransportationFeatures, self).save(*args, **kwargs)
 
 class SuggestPlayground(models.Model):
-    SuggestionID = models.IntegerField(unique=True, null=False),
-    PlaygroundName = models.TextField,
-    Address = models.TextField,
-    Description = models.CharField(max_length=1000),
-    Image = models.TextField,
+    SuggestionID = models.IntegerField(unique=True, null=False)
+    PlaygroundName = models.TextField
+    Address = models.TextField
+    Description = models.CharField(max_length=1000)
+    Image = models.TextField
 
     class Meta(object):
         verbose_name_plural = "Suggested Playgrounds"

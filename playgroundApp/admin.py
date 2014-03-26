@@ -1,9 +1,23 @@
 __author__ = 'hails'
 from django.contrib import admin
 from models import User, Playground, SchoolDistrict, Age, School, UserReview, SafetyFeatures, Features, TransportationFeatures
+from django import forms
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
 
 class UserAdmin(admin.ModelAdmin):
     search_fields = ('UserID',)
+    fieldsets = (
+        (None, {
+            'fields': ('UserID', 'Name', 'Zipcode')
+        }),
+        ('Advanced options', {
+            'classes': ('collapse',),
+            'fields': ('Age', 'FavoritesID', 'Image')
+        }),
+    )
 class PlaygroundAdmin(admin.ModelAdmin):
     search_fields = ('PlaygroundID',)
 class SchoolDistrictAdmin(admin.ModelAdmin):

@@ -27,20 +27,20 @@ class User(models.Model):
 
 class Playground(models.Model):
     PlaygroundID = models.IntegerField(unique=True, null=False)
-    Name = models.TextField
-    Street = models.TextField
-    Zipcode = models.IntegerField
-    Handicap = models.BooleanField
-    AgeID = models.IntegerField
-    SchoolDistrictID = models.IntegerField
-    Hours = models.TextField
-    isCertified = models.BooleanField
-    FeaturesID = models.IntegerField
-    Image = models.TextField
-    SafetyFeaturesID = models.IntegerField
-    TransportFeaturesID = models.IntegerField
-    GeoCoordinateLat = models.IntegerField
-    GeoCoordinateLon = models.IntegerField
+    Name = models.TextField()
+    Street = models.TextField()
+    Zipcode = models.IntegerField()
+    Handicap = models.BooleanField()
+    AgeID = models.IntegerField()
+    SchoolDistrictID = models.IntegerField()
+    Hours = models.TextField()
+    isCertified = models.BooleanField()
+    FeaturesID = models.IntegerField()
+    Image = models.TextField()
+    SafetyFeaturesID = models.IntegerField()
+    TransportFeaturesID = models.IntegerField()
+    GeoCoordinateLat = models.IntegerField()
+    GeoCoordinateLon = models.IntegerField()
 
     class Meta(object):
         verbose_name_plural = "Playgrounds"
@@ -53,12 +53,12 @@ class Playground(models.Model):
 
 class SchoolDistrict(models.Model):
     SchoolDistrictID = models.IntegerField(unique=True, null=False)
-    DistrictName = models.TextField
-    ZipcodeStart = models.IntegerField
-    ZipcodeEnd = models.IntegerField
+    DistrictName = models.TextField()
+    ZipcodeStart = models.IntegerField()
+    ZipcodeEnd = models.IntegerField()
     #I am not sure if we need GeoCoordinates or how to model them. Want to be able
     #to have the area on a map that a school district covers. GeoCodes the best way?
-    GeoCoordinates = models.IntegerField
+    GeoCoordinates = models.IntegerField()
 
     class Meta(object):
         verbose_name_plural = "School Districts"
@@ -71,13 +71,13 @@ class SchoolDistrict(models.Model):
 
 class Age(models.Model):
     AgeID = models.IntegerField(unique=True, null=False)
-    ZeroTwo = models.BooleanField
-    TwoFour = models.BooleanField
-    FourSix = models.BooleanField
-    SixEight = models.BooleanField
-    EightTen = models.BooleanField
-    TenTwelve = models.BooleanField
-    TwelveFourteen = models.BooleanField
+    ZeroTwo = models.BooleanField()
+    TwoFour = models.BooleanField()
+    FourSix = models.BooleanField()
+    SixEight = models.BooleanField()
+    EightTen = models.BooleanField()
+    TenTwelve = models.BooleanField()
+    TwelveFourteen = models.BooleanField()
 
     class Meta(object):
         verbose_name_plural = "Ages"
@@ -90,7 +90,7 @@ class Age(models.Model):
 
 class School(models.Model):
     SchoolID = models.IntegerField(unique=True, null=False)
-    Name = models.TextField
+    Name = models.TextField()
     SchoolDistrictID = models.IntegerField(unique=False)
 
     class Meta(object):
@@ -106,7 +106,7 @@ class UserReview(models.Model):
     ReviewID = models.IntegerField(unique=True, null=False)
     PlaygroundID = models.IntegerField(null=False)
     UserID = models.CharField(max_length=200)
-    Stars = models.IntegerField
+    Stars = models.IntegerField()
     Review = models.CharField(max_length=1000)
 
     class Meta(object):
@@ -119,18 +119,18 @@ class UserReview(models.Model):
         super(UserReview, self).save(*args, **kwargs)
 
 class Features(models.Model):
-    PlaygroundID = models.IntegerField(unique=True, null=False),
-    Swing = models.IntegerField
-    Slide = models.IntegerField
-    MonkeyBars = models.IntegerField
-    SandBox = models.IntegerField
-    Field = models.IntegerField
-    PicnicTable = models.IntegerField
-    Bathrooms = models.IntegerField
-    ChangingStation = models.IntegerField
-    Shade = models.IntegerField
-    BasketballCourt = models.IntegerField
-    Baseball = models.IntegerField
+    PlaygroundID = models.IntegerField(unique=True, null=False)
+    Swing = models.IntegerField()
+    Slide = models.IntegerField()
+    MonkeyBars = models.IntegerField()
+    SandBox = models.IntegerField()
+    Field = models.IntegerField()
+    PicnicTable = models.IntegerField()
+    Bathrooms = models.IntegerField()
+    ChangingStation = models.IntegerField()
+    Shade = models.IntegerField()
+    BasketballCourt = models.IntegerField()
+    Baseball = models.IntegerField()
 
     class Meta(object):
         verbose_name_plural = "Features"
@@ -143,8 +143,8 @@ class Features(models.Model):
 
 class SafetyFeatures(models.Model):
     PlaygroundID = models.IntegerField(unique=True, null=False)
-    ProximityToHighway = models.IntegerField
-    Fenced = models.BooleanField
+    ProximityToHighway = models.IntegerField()
+    Fenced = models.BooleanField()
 
     class Meta(object):
         verbose_name_plural = "Safety Features"
@@ -157,12 +157,12 @@ class SafetyFeatures(models.Model):
 
 class TransportationFeatures(models.Model):
     PlaygroundID = models.IntegerField(unique=True, null=False)
-    BikePath = models.BooleanField
-    HikingTrail = models.BooleanField
-    AdjacentParking = models.BooleanField
-    NearbyParking = models.BooleanField
-    NoParking = models.BooleanField
-    ProximityToBus = models.IntegerField
+    BikePath = models.BooleanField()
+    HikingTrail = models.BooleanField()
+    AdjacentParking = models.BooleanField()
+    NearbyParking = models.BooleanField()
+    NoParking = models.BooleanField()
+    ProximityToBus = models.IntegerField()
 
     class Meta(object):
         verbose_name_plural = "Transportation Features"
@@ -175,10 +175,10 @@ class TransportationFeatures(models.Model):
 
 class SuggestPlayground(models.Model):
     SuggestionID = models.IntegerField(unique=True, null=False)
-    PlaygroundName = models.TextField
-    Address = models.TextField
+    PlaygroundName = models.TextField()
+    Address = models.TextField()
     Description = models.CharField(max_length=1000)
-    Image = models.TextField
+    Image = models.TextField()
 
     class Meta(object):
         verbose_name_plural = "Suggested Playgrounds"

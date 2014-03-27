@@ -3,13 +3,12 @@ from django.http import render, get_object_or_404, redirect, render_to_response
 from playgroundApp.models import Playground
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from playgroundApp.forms import addPlaygroundForm
-def home(request):
-        return HttpResponse('HelloWorld')
 
-def Playground (request, pk):
-	Playerground=get_object_or_404 (Playground, id=pk)
-	return render (request, 'playgroundApp/playground_info.html', {"Playground": Playground})
 
+def Playground (request):
+	#Playerground=get_object_or_404 (Playground, id=pk)
+	#return render (request, 'playgroundApp/playground_info.html', {"Playground": Playground})
+	return render (request, "playgroundApp/playground_info.html")
 def Playground_List(request):
 	#playground_list=Playground.object.all()
 	#paginator=Paginator(playground_list, 10)
@@ -22,7 +21,7 @@ def Playground_List(request):
 	#except Emptypage:
 		#playgrounds=paginator.page(paginator.num_pages)
 	#return render (request, 'playgroundApp/playground_list.html' {playgrounds: playgrounds})
-
+	return render (request, "home.html")
 
 def suggestPlayground(request):
 	#if request.method == 'GET':
@@ -43,16 +42,16 @@ def suggestPlayground(request):
 			#return HttepResponseRedirect (reverse('Playground_list'))
 
 	#return render (request, 'playgroundApp/new_playground.html', { 'form': form, })
-	return render (request, 'It lets user suggests a playground')
+	return render (request, "playgroundApp/playgroundSuggest.html")
 def useProfile (request):
 	
 	#User=get_object_or_404 (Playground)
         #return render (request, 'playgroundApp/user_info.html', {"User": User})
-	return (request, 'It shows user information')
+	return (request, "playgroundApp/userProfile.html")
 def userLogin (request):
-	return (request, 'It is the user login view')
+	return (request, "playgroundApp/userLogin.html")
 
 def userSignUp(request):
-	return  render (request, 'It is the user sign up view')
+	return  render (request, "plagyroundApp/userSignup.html")
 
 

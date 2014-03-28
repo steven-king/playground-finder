@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    UserID = models.IntegerField(unique=True, null=False)
+    UserID = models.CharField(unique=True, null=False, max_length=200)
     Name = models.CharField(null=False, max_length=200)
     Description = models.TextField()
     Zipcode = models.IntegerField(null=True)
@@ -107,7 +107,7 @@ class UserReview(models.Model):
     PlaygroundID = models.IntegerField(null=False)
     UserID = models.CharField(max_length=200)
     Stars = models.IntegerField()
-    Review = models.CharField(max_length=1000)
+    Review = models.TextField(max_length=1000)
 
     class Meta(object):
         verbose_name_plural = "User Reviews"

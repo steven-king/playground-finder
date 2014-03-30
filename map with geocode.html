@@ -31,8 +31,31 @@ function initialize() {
   var mapOptions = {
     zoom: 15
   };
+  var styles = [
+  {
+    stylers: [
+      { hue: "#05998A" },
+    ]
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      { hue: "#FFFA7F" },
+      { saturation: 100 },
+      { lightness: 50 },
+      {visibility: "simplified" }
+    ]
+  },{
+    featureType: "poi.business",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+    }
+];
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+  map.setOptions({styles: styles});
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {

@@ -3,10 +3,6 @@ from django.contrib import admin
 from models import User, Playground, SchoolDistrict, Age, School, UserReview, SafetyFeatures, Features, TransportationFeatures
 from django import forms
 
-class UserForm(forms.ModelForm):
-    class Meta:
-        model = User
-
 class UserAdmin(admin.ModelAdmin):
     search_fields = ('UserID',)
     fieldsets = (

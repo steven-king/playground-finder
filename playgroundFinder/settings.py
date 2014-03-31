@@ -6,6 +6,7 @@ PROJECT_ROOT = os.path.dirname(__file__)
 PROJECT_PATH = os.path.dirname(PROJECT_ROOT)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -71,14 +72,17 @@ MEDIA_URL = '/media/'
 ###STATIC_URL = '/static/'
 
 # Additional locations of static files
-'''
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_ROOT, 'static_media'),
 )
-'''
+
 # List of finder classes that know how to find static files in
 # various locations.
 
@@ -171,12 +175,3 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ### Allow all host headers
 ALLOWED_HOSTS = ['*']
-
-### Static asset configuration
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)

@@ -1,5 +1,10 @@
 // Single primary color that all mixins use. Str8 ballin.
-@primary:        hsl(204, 59%, 58%);
+@primary:        hsla(174, 94%, 31%, 1);
+// hsl
+// yellow hsla(58, 100%, 75%, 1)
+// purple hsla(329, 29%, 41%, 1)
+// pale hsla(53, 100%, 87%, 1)
+// dark hsla(350, 38%, 9%, 1)
  
 // Primary Variants -
 @primaryLight:   hsl(hue(@primary), 100%, 70%);
@@ -28,13 +33,14 @@
 
 
 
+
 //basic html vars
 
-@text-color: #666;
+@text-color: #210F12;
 @link-color: @primary;
 @link-color-hover: @primaryLight;
 
-@body-bg: #CCC;
+@body-bg: #fff;
 
 
 @grid-gutter-width: 0px;
@@ -58,4 +64,9 @@
 @border-radius-base:       0px;
 @border-radius-large:       0px;
 @border-radius-small:       0px;
+
+//text
+@font-size-base: 18px;
+@headings-font-family: @font-family-serif;
+@headings-color: @primary;
 

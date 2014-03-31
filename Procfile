@@ -1,2 +1,1 @@
-
-web: gunicorn playgroundFinder.wsgi
+web: python manage.py collectstatic --dry-run --noinput ; gunicorn playgroundFinder.wsgi

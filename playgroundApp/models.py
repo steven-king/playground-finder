@@ -20,7 +20,7 @@ class User(models.Model):
         verbose_name_plural = "Users"
         #ordering = ('userID',)
     def __unicode__(self):
-        return self.UserID
+        return unicode(self.UserID)
     def save(self, *args, **kwargs):
         self.UserID = self.UserID.upper()
         super(User, self).save(*args, **kwargs)
@@ -39,16 +39,15 @@ class Playground(models.Model):
     Image = models.TextField()
     SafetyFeaturesID = models.IntegerField()
     TransportFeaturesID = models.IntegerField()
-    GeoCoordinateLat = models.IntegerField()
-    GeoCoordinateLon = models.IntegerField()
+    GeoCoordinateLat = models.DecimalField(max_digits=12, decimal_places =10)
+    GeoCoordinateLon = models.DecimalField(max_digits=12, decimal_places =10)
 
     class Meta(object):
         verbose_name_plural = "Playgrounds"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.PlaygroundID
+        return unicode(self.PlaygroundID)
     def save(self, *args, **kwargs):
-        self.PlaygroundID = self.PlaygroundID.upper()
         super(Playground, self).save(*args, **kwargs)
 
 class SchoolDistrict(models.Model):
@@ -58,13 +57,13 @@ class SchoolDistrict(models.Model):
     ZipcodeEnd = models.IntegerField()
     #I am not sure if we need GeoCoordinates or how to model them. Want to be able
     #to have the area on a map that a school district covers. GeoCodes the best way?
-    GeoCoordinates = models.IntegerField()
+    GeoCoordinates = models.DecimalField(max_digits=12, decimal_places =10)
 
     class Meta(object):
         verbose_name_plural = "School Districts"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.SchoolDistrictID
+        return unicode(self.SchoolDistrictID)
     def save(self, *args, **kwargs):
         self.SchoolDistrictID = self.SchoolDistrictID.upper()
         super(SchoolDistrict, self).save(*args, **kwargs)
@@ -83,9 +82,9 @@ class Age(models.Model):
         verbose_name_plural = "Ages"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.AgeID
+        return unicode(self.AgeID)
     def save(self, *args, **kwargs):
-        self.AgeID = self.AgeID.upper()
+        #self.AgeID = self.AgeID.upper()
         super(Age, self).save(*args, **kwargs)
 
 class School(models.Model):
@@ -97,7 +96,7 @@ class School(models.Model):
         verbose_name_plural = "Schools"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.SchoolID
+        return unicode(self.SchoolID)
     def save(self, *args, **kwargs):
         self.SchoolID = self.SchoolID.upper()
         super(School, self).save(*args, **kwargs)
@@ -113,7 +112,7 @@ class UserReview(models.Model):
         verbose_name_plural = "User Reviews"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.ReviewID
+        return unicode(self.ReviewID)
     def save(self, *args, **kwargs):
         self.ReviewID = self.ReviewID.upper()
         super(UserReview, self).save(*args, **kwargs)
@@ -136,7 +135,7 @@ class Features(models.Model):
         verbose_name_plural = "Features"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.PlaygroundID
+        return unicode(self.PlaygroundID)
     def save(self, *args, **kwargs):
         self.PlaygroundID = self.PlaygroundID.upper()
         super(Features, self).save(*args, **kwargs)
@@ -150,7 +149,7 @@ class SafetyFeatures(models.Model):
         verbose_name_plural = "Safety Features"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.PlaygroundID
+        return unicode(self.PlaygroundID)
     def save(self, *args, **kwargs):
         self.PlaygroundID = self.PlaygroundID.upper()
         super(SafetyFeatures, self).save(*args, **kwargs)
@@ -168,7 +167,7 @@ class TransportationFeatures(models.Model):
         verbose_name_plural = "Transportation Features"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.PlaygroundID
+        return unicode(self.PlaygroundID)
     def save(self, *args, **kwargs):
         self.PlaygroundID = self.PlaygroundID.upper()
         super(TransportationFeatures, self).save(*args, **kwargs)
@@ -184,7 +183,7 @@ class SuggestPlayground(models.Model):
         verbose_name_plural = "Suggested Playgrounds"
         #ordering = ('UserID',)
     def __unicode__(self):
-        return self.SuggestiontID
+        return unicode(self.SuggestiontID)
     def save(self, *args, **kwargs):
         self.SuggestionID = self.SuggestionID.upper()
         super(SuggestPlayground, self).save(*args, **kwargs)

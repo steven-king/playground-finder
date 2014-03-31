@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'playgroundFinder.views.home', name='home'),
     # url(r'^playgroundFinder/', include('playgroundFinder.foo.urls')),
-    url(r'^hello-world/$', 'playgroundApp.views.home'),
+    url(r'^', include('playgroundApp.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/', include(admin.site.urls)),

@@ -74,7 +74,7 @@ MEDIA_URL = '/media/'
 # Additional locations of static files
 
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".

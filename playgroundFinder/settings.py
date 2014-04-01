@@ -72,15 +72,18 @@ MEDIA_URL = '/media/'
 ###STATIC_URL = '/static/'
 
 # Additional locations of static files
+#STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/staticfiles/'
+#STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'static'),
+    #os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 # List of finder classes that know how to find static files in
@@ -168,7 +171,7 @@ LOGGING = {
 }
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] = dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_YELLOW_URL"])
+#DATABASES['default'] = dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_YELLOW_URL"])
 
 ### Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

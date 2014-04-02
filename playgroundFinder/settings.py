@@ -75,6 +75,7 @@ MEDIA_URL = '/media/'
 #STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
+
 STATIC_ROOT = 'staticfiles'
 #STATIC_URL = '/staticfiles/'
 
@@ -82,7 +83,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'static_media'),
+    os.path.join(PROJECT_ROOT, 'static'),
     #os.path.join(BASE_DIR, 'staticfiles'),
 )
 
@@ -170,8 +171,8 @@ LOGGING = {
     }
 }
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_YELLOW_URL"])
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_YELLOW_URL"])
 
 ### Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

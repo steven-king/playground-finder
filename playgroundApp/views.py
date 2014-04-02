@@ -30,3 +30,6 @@ def userSignUp(request):
 
 def userSuggest(request):
 	return  render (request, "playgroundApp/user_suggest.html")
+
+def map(request):
+	return  render (request, "playgroundApp/map.html")

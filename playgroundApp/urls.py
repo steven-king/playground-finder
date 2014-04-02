@@ -10,4 +10,5 @@ urlpatterns=patterns('',
 	url(r'^playgroundapp/user_suggest$', views.userSuggest, name='userSuggest'),
 	url(r'^playgroundapp/user_signup$', views.userSignUp, name='userSignUp'),
 	url(r'^playgroundapp/user_login$', views.userLogin, name='userLogin'),
+        url(r'^playgroundapp/map$', views.map, name='map'),
 )

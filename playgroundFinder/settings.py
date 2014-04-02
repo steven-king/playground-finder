@@ -1,8 +1,11 @@
 # Django settings for playgroundFinder project.
+
 import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
 PROJECT_PATH = os.path.dirname(PROJECT_ROOT)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -15,8 +18,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(PROJECT_PATH,'playgroundFinder.db'),                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_PATH,'playgroundFinder.db'),
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -60,22 +63,32 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_PATH, 'static_media')
+
+###STATIC_ROOT = os.path.join(PROJECT_PATH, 'static_media')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+
+###STATIC_URL = '/static/'
 
 # Additional locations of static files
+#STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = 'staticfiles'
+#STATIC_URL = '/staticfiles/'
+
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_ROOT, 'static_media'),
+    #os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 # List of finder classes that know how to find static files in
 # various locations.
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -156,3 +169,12 @@ LOGGING = {
         },
     }
 }
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_YELLOW_URL"])
+
+### Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+### Allow all host headers
+ALLOWED_HOSTS = ['*']

@@ -1,0 +1,21 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.User",
+        "fields": {
+            "userID": "SuperMom19",
+            "name": "Tricia Whitney",
+            "description": "Irure mollit laborum sint reprehenderit dolore et velit velit ex eiusmod. Elit velit commodo adipisicing aute. Sit do est aliquip id. Adipisicing deserunt non est voluptate minim laboris proident. Labore tempor id consequat voluptate est. Pariatur eiusmod tempor quis nulla ullamco pariatur mollit do ea tempor ut.",
+            "zipcode": 27573,
+            "age": 27,
+            "isWorkingMom": false,
+            "isWorkingDad": false,
+            "isStayMom": false,
+            "isStayDad": true,
+            "isGrandma": false,
+            "isOther": false,
+            "favoritesID": 1,
+            "image": "http://placehold.it/32x32"
+        }
+    }
+]

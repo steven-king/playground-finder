@@ -49,7 +49,16 @@ def useProfile (request):
         #return render (request, 'playgroundApp/user_info.html', {"User": User})
 	return (request, "playgroundApp/userProfile.html")
 def userLogin (request):
-	return (request, "playgroundApp/userLogin.html")
+	
+	if request.method=='POST':
+		form=login()
+	else:
+		form=login(request.GET)
+	if form.is_valid():
+		User=User.objects.all().filter(name=form.clean_data['name'])
+		return render (request, "playgroundApp/user_profile.html", {'User': User})
+	
+	return render (request, "playgroundApp/user_login.html", {'form': form,})
 
 def userSignUp(request):
 	return  render (request, "plagyroundApp/userSignup.html")

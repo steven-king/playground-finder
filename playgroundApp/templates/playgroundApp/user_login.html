@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Login</h1>
+<body>
+        <form action="/playgroundapp/user_login' method='get'> {% csrf_token %}
+        {{ form.as_p}}
+        <input type='submit' value='Submit'/>
+        </form>
+
+</body>
+{% endblock %}
+

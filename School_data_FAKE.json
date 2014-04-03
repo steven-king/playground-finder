@@ -5,7 +5,11 @@
         "fields": {
             "SchoolID": 0,
             "Name": "dolor dolore",
+<<<<<<< HEAD
+            "SchoolDistrictID": 1
+=======
             "SchoolDistrictID": "5e51c15a-094d-4770-b7ce-d864c08d6e72"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -14,7 +18,11 @@
         "fields": {
             "SchoolID": 1,
             "Name": "pariatur laborum",
+<<<<<<< HEAD
+            "SchoolDistrictID": 1
+=======
             "SchoolDistrictID": "3bd2e4f3-65af-4acc-9595-1a306938a30a"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -23,7 +31,11 @@
         "fields": {
             "SchoolID": 2,
             "Name": "nulla cillum",
+<<<<<<< HEAD
+            "SchoolDistrictID": 3
+=======
             "SchoolDistrictID": "fb6a1281-80c0-4493-b4dd-d76798d011e5"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -32,7 +44,11 @@
         "fields": {
             "SchoolID": 3,
             "Name": "esse occaecat",
+<<<<<<< HEAD
+            "SchoolDistrictID": 0
+=======
             "SchoolDistrictID": "21986f27-d79e-4b51-a709-e58b96e14800"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -41,7 +57,11 @@
         "fields": {
             "SchoolID": 4,
             "Name": "aute quis",
+<<<<<<< HEAD
+            "SchoolDistrictID": 3
+=======
             "SchoolDistrictID": "f36ca8eb-b5c6-410e-b16d-b9f90e51a97d"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -50,7 +70,11 @@
         "fields": {
             "SchoolID": 5,
             "Name": "in anim",
+<<<<<<< HEAD
+            "SchoolDistrictID": 2
+=======
             "SchoolDistrictID": "908fe80b-b0bf-4639-83c6-a001f835ac9f"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     },
     {
@@ -59,7 +83,11 @@
         "fields": {
             "SchoolID": 6,
             "Name": "ea qui",
+<<<<<<< HEAD
+            "SchoolDistrictID": 0
+=======
             "SchoolDistrictID": "fce24ba0-f4eb-4869-8262-0eaf1f6a6be4"
+>>>>>>> 04f2d900b05f292eebd4522b35804e792c3d5e45
         }
     }
 ]

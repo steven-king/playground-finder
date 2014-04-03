@@ -1,0 +1,72 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.Age",
+        "fields": {
+                "AgeID": 0,
+                "ZeroTwo": true,
+                "TwoFour": false,
+                "FourSix": true,
+                "SixEight": false,
+                "EightTen": false,
+                "TenTwelve": true,
+                "TwelveFourteen": false
+        }
+    },
+    {
+        "pk": 2,
+        "model": "playgroundApp.Age",
+        "fields": {
+            "AgeID": 1,
+            "ZeroTwo": true,
+            "TwoFour": true,
+            "FourSix": true,
+            "SixEight": true,
+            "EightTen": false,
+            "TenTwelve": true,
+            "TwelveFourteen": true
+        }
+    },
+    {
+        "pk": 3,
+        "model": "playgroundApp.Age",
+        "fields": {
+            "AgeID": 2,
+            "ZeroTwo": true,
+            "TwoFour": true,
+            "FourSix": false,
+            "SixEight": false,
+            "EightTen": true,
+            "TenTwelve": false,
+            "TwelveFourteen": false
+        }
+    },
+    {
+        "pk": 4,
+        "model": "playgroundApp.Age",
+        "fields": {
+            "AgeID": 3,
+            "ZeroTwo": false,
+            "TwoFour": false,
+            "FourSix": true,
+            "SixEight": false,
+            "EightTen": false,
+            "TenTwelve": true,
+            "TwelveFourteen": false
+        }
+    },
+    {
+        "pk": 5,
+        "model": "playgroundApp.Age",
+        "fields": {
+            "AgeID": 4,
+            "ZeroTwo": false,
+            "TwoFour": true,
+            "FourSix": false,
+            "SixEight": true,
+            "EightTen": false,
+            "TenTwelve": false,
+            "TwelveFourteen": false
+        }
+    }
+]

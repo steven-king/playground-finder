@@ -1,6 +1,9 @@
-playground-finder
+
+As you can see, this is the playground-finder
 =================
 Class assigment for UNC jSchool 583 Advanced Media Programing
+
+Adding this so github will love me
 
 Django Bootstrap HTML5/CSS/3 JavaScript
 

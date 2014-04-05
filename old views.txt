@@ -4,11 +4,15 @@ from playgroundApp.models import Playground
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from playgroundApp.forms import addPlaygroundForm
 
+def home(request):
+        return HttpResponse('HelloWorld')
 
+<<<<<<< HEAD
 def Playground (request):
 	#Playerground=get_object_or_404 (Playground, id=pk)
 	#return render (request, 'playgroundApp/playground_info.html', {"Playground": Playground})
 	return render (request, "playgroundApp/playground_info.html")
+
 def Playground_List(request):
 	#playground_list=Playground.object.all()
 	#paginator=Paginator(playground_list, 10)
@@ -44,55 +48,12 @@ def suggestPlayground(request):
 	#return render (request, 'playgroundApp/new_playground.html', { 'form': form, })
 	return render (request, "playgroundApp/playgroundSuggest.html")
 def useProfile (request):
-	
+        return (request, "playgroundApp/userProfile.html")
 	#User=get_object_or_404 (Playground)
         #return render (request, 'playgroundApp/user_info.html', {"User": User})
-	return (request, "playgroundApp/userProfile.html")
+
 def userLogin (request):
-	
-	if request.method=='POST':
-		form=login()
-	else:
-		form=login(request.GET)
-	if form.is_valid():
-		User=User.objects.all().filter(name=form.clean_data['name'])
-		return render (request, "playgroundApp/user_profile.html", {'User': User})
-	
-	return render (request, "playgroundApp/user_login.html", {'form': form,})
+	return (request, "playgroundApp/userLogin.html")
 
 def userSignUp(request):
 	return  render (request, "plagyroundApp/userSignup.html")
-
-
-<<<<<<< HEAD
-def home(request):
-        return HttpResponse('HelloWorld')
-
-# Below is copied from Xing with comments taken out
-# Create your views here.
-
-from django.shortcuts import render, render_to_response
-
-
-def playgroundDetail (request):
-	return render (request, "playgroundApp/playground_info.html")
-
-def playgroundList(request):
-	return render (request, "playgroundApp/home.html")
-
-def suggestPlayground(request):
-	return render (request, "playgroundApp/playground_suggest.html")
-
-def userProfile (request):
-	return render (request, "playgroundApp/user_profile.html")
-
-def userLogin (request):
-	return render (request, "playgroundApp/user_login.html")
-
-def userSignUp(request):
-	return  render (request, "playgroundApp/user_signup.html")
-
-def userSuggest(request):
-	return  render (request, "playgroundApp/user_suggest.html")
-=======
->>>>>>> 2a58c0eadb1d262ee2f01f576d392a1b12f13187

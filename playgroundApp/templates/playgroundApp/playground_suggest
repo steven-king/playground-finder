@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>User Profile</h1>
-
+<h1>Suggest a Playground</h1>
 
 {% endblock %}
 

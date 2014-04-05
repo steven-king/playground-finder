@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Find N' Play</h1>
-<h4>Find, contribute and explore playgrounds in the Durham/Chapel Hill area.</h4>
+<div class="row">
+    
+<div class="col-md-6 col-md-offset-3" style="min-height: 100%">
+    <center>
+        <h1>Find N' Play</h1>
+        <h4>Find, contribute and explore playgrounds in the Durham/Chapel Hill area.</h4>
+    </center>
+</div>
+</div><!--end title row-->
 
 <hr>
 
 <a id="find"></a>
 <div class="row">
+<h1>Find a PLayground</h1>
 <div class="col-md-5 left-info">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="search" style="border: 1px solid #000; border-right: none;">
@@ -16,7 +24,7 @@
         </span>
     </div><!-- /input-group -->    
     
-    
+    <div class="table-div">
     <table class="table">
         <thead>
             <tr>
@@ -49,8 +57,17 @@
                 <td>Chapel Hill-Carrboro YMCA</td>
                 <td>980 Martin Luther King Dr.</td>
             </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
         </tbody>
     </table>
+    </div>
     
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
@@ -63,14 +80,10 @@
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
-                <ul>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                </ul>
+                <form action="">
+                    <input type="checkbox" name="feature" value="Bike">Feature One<br>
+                    <input type="checkbox" name="feature" value="Car">Feature Two 
+                </form>
             </div>
           </div>
         </div>
@@ -84,14 +97,10 @@
           </div>
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
-                <ul>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                    <li><input type="radio"></li>
-                </ul>
+                <form action="">
+                    <input type="checkbox" name="transportation" value="Bike">Feature One<br>
+                    <input type="checkbox" name="transportation" value="Car">Feature Two 
+                </form>
             </div>
           </div>
         </div>
@@ -100,7 +109,7 @@
     
 </div><!--end list column-->
 <div class="col-md-7 right-map">
-    <iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none;">
+    <iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none; padding: 0; margin: 0;">
         
     </iframe>
 </div>

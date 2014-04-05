@@ -98,7 +98,7 @@ function codeAddress() {
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
-      var image = '{{ STATIC_URL }}playgroundApp/images/marker_purple.png';
+      var image = 'images/marker_purple.png';
       var purpleMarker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,

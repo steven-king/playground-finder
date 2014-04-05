@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
+
+<div class="row opening-screen">
     
-<div class="col-md-6 col-md-offset-3" style="min-height: 100%">
+<div class="col-md-6 col-md-offset-3 opening-text" style="min-height: 100%">
     <center>
-        <h1>Find N' Play</h1>
+        <h1 class="project-title">Find N' Play</h1>
         <h4>Find, contribute and explore playgrounds in the Durham/Chapel Hill area.</h4>
+        <a href="{{ TEMPLATE_DIRS }}/#find"><button type="button" class="btn btn-info main-buttons">Find A Playground</button></a><br>
+        <a href="{{ TEMPLATE_DIRS }}playgroundapp/playground_suggest"><button type="button" class="btn btn-warning main-buttons">Submit A Playground</button></a>
     </center>
 </div>
 </div><!--end title row-->
 
-<hr>
 
+<div class="container">
 <a id="find"></a>
 <div class="row">
 <h1>Find a PLayground</h1>
@@ -24,7 +27,7 @@
         </span>
     </div><!-- /input-group -->    
     
-    <div class="table-div">
+    <div class="table-div" style="max-height: 250px; overflow-y: scroll; margin: 20px inherit;">
     <table class="table">
         <thead>
             <tr>
@@ -115,4 +118,5 @@
 </div>
 </div><!--end list detail and map row-->
 
+</div><!--end div container-->
 {% endblock %}

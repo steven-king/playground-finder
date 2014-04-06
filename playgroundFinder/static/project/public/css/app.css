@@ -9,6 +9,15 @@
     padding: 0;
 }
 
+@media (max-width: 480px) {
+  .opening-screen {
+    background: none;
+  }
+  h1.project-title, h4 {
+    color: hsla(174, 94%, 31%, 1) !important;
+  }
+}
+
 h1.project-title {
     color: #FFF7BB;
 }
@@ -34,4 +43,9 @@ h1.project-title {
 
 .opening-text .btn-warning {
     color: #FFF7BB;
+}
+
+/*MOBILE SETTINGS*/
+.mobile-map {
+    margin: 10px 50px;
 }

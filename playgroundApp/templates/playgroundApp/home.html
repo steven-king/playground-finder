@@ -29,6 +29,12 @@
         </span>
     </div><!-- /input-group -->    
     
+    <div class="hidden-md hidden-lg mobile-map">
+    <iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none; padding: 0; margin: 0;">
+        
+    </iframe>
+    </div> <!-- end mobile map-->
+    
     <div class="table-div" style="max-height: 250px; overflow-y: scroll; margin: 20px inherit;">
     <table class="table">
         <thead>
@@ -74,7 +80,7 @@
     </table>
     </div>
     
-    <div class="panel-group" id="accordion">
+    <div class="panel-group hidden-sm hidden-xs" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
@@ -113,7 +119,7 @@
     </div>
     
 </div><!--end list column-->
-<div class="col-md-7 right-map">
+<div class="col-md-7 right-map hidden-sm hidden-xs">
     <iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none; padding: 0; margin: 0;">
         
     </iframe>

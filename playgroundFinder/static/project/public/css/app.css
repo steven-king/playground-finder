@@ -1,7 +1,9 @@
 .opening-screen {
     height: 100%;
-    background-color: hsla(174, 94%, 31%, 1);
+    background-color: hsla(174, 94%, 31%, 0.7);
+    background: url('../images/opening-bg.png');
     display: table;
+    background-position: center;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -21,7 +23,15 @@ h1.project-title {
 }
 
 .main-buttons {
-    min-width: 250px;
+    min-width: 300px;
     color: hsla(174, 94%, 31%, 1);
     margin: 10px;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+}
+
+.opening-text .btn-warning {
+    color: #FFF7BB;
 }

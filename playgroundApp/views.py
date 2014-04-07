@@ -43,8 +43,19 @@ def suggestPlayground(request):
 
 	#return render (request, 'playgroundApp/new_playground.html', { 'form': form, })
 	return render (request, "playgroundApp/playgroundSuggest.html")
+
+#This will be the view to return all of the geocoordinates
+def playgroundGeoCodes(request):
+	playgrounds = Playground.object.all()
+	context = {
+		playgrounds
+	}
+	#This is going to to be a list of all the playgrounds. Ana will have to loop over all the objects and access only the GeocoordinateLat and GeocoordinateLon
+	#attribute 
+	return render(request, "playgroundApp/map.html", context)
+
+
 def useProfile (request):
-	
 	#User=get_object_or_404 (Playground)
         #return render (request, 'playgroundApp/user_info.html', {"User": User})
 	return (request, "playgroundApp/userProfile.html")

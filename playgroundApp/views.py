@@ -64,7 +64,7 @@ def userSignUp(request):
 	return  render (request, "plagyroundApp/userSignup.html")
 
 
-<<<<<<< HEAD
+
 def home(request):
         return HttpResponse('HelloWorld')
 
@@ -94,5 +94,13 @@ def userSignUp(request):
 
 def userSuggest(request):
 	return  render (request, "playgroundApp/user_suggest.html")
-=======
->>>>>>> 2a58c0eadb1d262ee2f01f576d392a1b12f13187
+def userReview(request):
+       if request.method == 'GET':
+               newReview = addReviewForm()
+       else:
+               newReview =addReviewForm(request.POST)
+               submitdate =datetime.utcnow()
+       if newReview.is_valid():
+               newReview =UserReview.objects.create(name=request.POST['name'], date=submitdate)
+               return HttpResponseRedirect(reverse('playgroundapp_home'))
+       return render(request, 'playgroundApp/new_review.html')

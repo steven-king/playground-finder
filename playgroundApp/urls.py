@@ -10,11 +10,8 @@ urlpatterns=patterns('',
 	url(r'^playgroundapp/user_suggest$', views.userSuggest, name='userSuggest'),
 	url(r'^playgroundapp/user_signup$', views.userSignUp, name='userSignUp'),
 	url(r'^playgroundapp/user_login$', views.userLogin, name='userLogin'),
-
-        
-        #urls for the user review page
-        url(r'^$newreview/$', views.userReview, name='playground_new_review'),
-        url(r'new_review.html', views.userReview, name='post_form_review'),
+        url(r'^playgroundapp/newreview/$', views.userReview, name='playground_new_review'),
+        url(r'^playgroundapp/new_review.html', views.userReview, name='post_form_review'),
         url(r'^playgroundapp/map$', views.map, name='map'),
-
 )
+

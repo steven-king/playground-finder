@@ -1,8 +1,8 @@
 # Create your views here.
-from django.http import render, get_object_or_404, redirect, render_to_response
+from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from playgroundApp.models import Playground
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from playgroundApp.forms import addPlaygroundForm
+from playgroundApp.forms import addReviewForm
 
 
 def Playground (request):
@@ -115,3 +115,6 @@ def userReview(request):
                newReview =UserReview.objects.create(name=request.POST['name'], date=submitdate)
                return HttpResponseRedirect(reverse('playgroundapp_home'))
        return render(request, 'playgroundApp/new_review.html')
+
+def map(request):
+	return render(request, "playgroundApp/map.html")

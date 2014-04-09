@@ -3,56 +3,184 @@
 {% block content %}
 <div class="container">
 
-
 <h1>Add a Playground</h1>
 <div class=row>
-    <div class="col-md-6 left-info">
-        <h2>Insert Contact Form Herey</h2>
+    <div class="col-md-6">
+    <form role="form" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-10"> 
+            <input type="text" class="form-control" placeholder="name" style="border: 1px solid #000;">
+        </div>
+        <div class="col-sm-10">    
+            <input type="text" class="form-control" placeholder="street address" style="border: 1px solid #000;">
+        </div>
+        <div class="col-sm-10"> 
+            <input type="text" class="form-control" placeholder="city" style="border: 1px solid #000;">
+        </div>
+        <div class="col-sm-10"> 
+            <input type="text" class="form-control" placeholder="hours open" style="border: 1px solid #000;">
+        </div>
+        <div class="col-sm-10"> 
+            <input type="text" class="form-control" placeholder="description" style="border: 1px solid #000;">
+        </div>
+       
+    </div><!--end form group-->
+    </form>
     </div>
-    <div class="col-md-6 left-info">
+    
+    <div class="col-md-6">
             <div class="panel panel-default">
             <h4 class="panel-title">
               check all features
             </h4>
-                <ul>
-                    <li><input type="Swings"></li>
-                    <li><input type="Slide"></li>
-                    <li><input type="Monkey bars"></li>
-                    <li><input type="Sandbox"></li>
-                    <li><input type="Fence"></li>
-                    <li><input type="Field"></li>
-                    <li><input type="Picnic Tables"></li>
-                    <li><input type="Hiking trail"></li>
-                    <li><input type="Bathrooms"></li>
-                    <li><input type="Changing station"></li>
-                    <li><input type="Shade"></li>
-                    <li><input type="Basketball courts"></li>
-                    <li><input type="Baseball field"></li>
-                </ul>
-            </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Swings
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Slides
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Monkey Bars
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Sandbox
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Fence
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Field
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Picnic Tables
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Hiking Trails
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Bathrooms
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Changing station
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Shade
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Basketball court
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    Baseball Field
+                    </label>
+                </div>
+            </div><!-- end panel-->
              <div class="panel panel-default">
             <h4 class="panel-title">
               appropriate for ages
             </h4>
-                <ul>
-                    <li><input type="0-2"></li>
-                    <li><input type="2-4"></li>
-                    <li><input type="4-6"></li>
-                    <li><input type="6-8"></li>
-                    <li><input type="8-10"></li>
-                    <li><input type="10-12"></li>
-                    <li><input type="12-14"></li>
-                </ul>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    0-2
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    2-4
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    4-6
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    6-8
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    8-10
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    10-12
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                    12-14
+                    </label>
+                </div>
             </div>
               <div class="panel panel-default">
             <h4 class="panel-title">
               handicap accessible?
             </h4>
-                <ul>
-                    <li><input type="Yes"></li>
-                    <li><input type="No"></li>
-                    <li><input type="Don't know"></li>
-                </ul>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="handicap" id="handicap-yes" value="handicap-yes" checked>
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="handicap" id="handicap-no" value="handicap-no">
+                        No
+                    </label>
+                  </div>
+                   <div class="radio">
+                    <label>
+                      <input type="radio" name="handicap" id="handicap-idk" value="handicap-idk">
+                        Don't Know
+                    </label>
+                  </div>
             </div>
           </div>
      

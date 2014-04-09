@@ -34,7 +34,6 @@ class Playground(models.Model):
     AgeID = models.IntegerField()
     SchoolDistrictID = models.IntegerField()
     Hours = models.TextField()
-    isCertified = models.BooleanField()
     FeaturesID = models.IntegerField()
     Image = models.TextField()
     SafetyFeaturesID = models.IntegerField()

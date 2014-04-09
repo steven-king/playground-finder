@@ -1,4 +1,11 @@
-<form action='/new_review,html' method='post'>{% csrf_token %}
-{{ form.as_p }}
-<input type='submit' value='Submit' />
-</form>
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Review Form</h1>
+<body>
+    <form action='/playgroundapp/new_review.html' method='get'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Submit' />
+    </form>
+</body>
+{% endblock %}

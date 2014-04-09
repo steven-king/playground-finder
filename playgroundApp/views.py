@@ -43,19 +43,14 @@ def suggestPlayground(request):
 
 	#return render (request, 'playgroundApp/new_playground.html', { 'form': form, })
 	return render (request, "playgroundApp/playgroundSuggest.html")
-
-#This will be the view to return all of the geocoordinates
 def playgroundGeoCodes(request):
-	playgrounds = Playground.object.all()
 	context = {
-		playgrounds
+		'playgrounds': Playground.objects.all()
 	}
-	#This is going to to be a list of all the playgrounds. Ana will have to loop over all the objects and access only the GeocoordinateLat and GeocoordinateLon
-	#attribute 
 	return render(request, "playgroundApp/map.html", context)
-
-
+	
 def useProfile (request):
+	
 	#User=get_object_or_404 (Playground)
         #return render (request, 'playgroundApp/user_info.html', {"User": User})
 	return (request, "playgroundApp/userProfile.html")
@@ -81,9 +76,6 @@ def home(request):
 
 # Below is copied from Xing with comments taken out
 # Create your views here.
-
-from django.shortcuts import render, render_to_response
-
 
 def playgroundDetail (request):
 	return render (request, "playgroundApp/playground_info.html")
@@ -115,6 +107,5 @@ def userReview(request):
                newReview =UserReview.objects.create(name=request.POST['name'], date=submitdate)
                return HttpResponseRedirect(reverse('playgroundapp_home'))
        return render(request, 'playgroundApp/new_review.html')
-
 def map(request):
 	return render(request, "playgroundApp/map.html")

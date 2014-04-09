@@ -1,8 +1,8 @@
 # Create your views here.
-from django.http import render, get_object_or_404, redirect, render_to_response
+from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from playgroundApp.models import Playground
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from playgroundApp.forms import addPlaygroundForm
+from playgroundApp.forms import addReviewForm
 
 
 def Playground (request):
@@ -43,6 +43,12 @@ def suggestPlayground(request):
 
 	#return render (request, 'playgroundApp/new_playground.html', { 'form': form, })
 	return render (request, "playgroundApp/playgroundSuggest.html")
+def playgroundGeoCodes(request):
+	context = {
+		'playgrounds': Playground.objects.all()
+	}
+	return render(request, "playgroundApp/map.html", context)
+	
 def useProfile (request):
 	
 	#User=get_object_or_404 (Playground)
@@ -70,9 +76,6 @@ def home(request):
 
 # Below is copied from Xing with comments taken out
 # Create your views here.
-
-from django.shortcuts import render, render_to_response
-
 
 def playgroundDetail (request):
 	return render (request, "playgroundApp/playground_info.html")
@@ -104,3 +107,5 @@ def userReview(request):
                newReview =UserReview.objects.create(name=request.POST['name'], date=submitdate)
                return HttpResponseRedirect(reverse('playgroundapp_home'))
        return render(request, 'playgroundApp/new_review.html')
+def map(request):
+	return render(request, "playgroundApp/map.html")

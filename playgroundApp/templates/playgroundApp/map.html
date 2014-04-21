@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Geocoding service</title>
+    <title>Durham Chapel Hill Playgrounds</title>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -22,8 +22,14 @@
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    
     <script>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
     var playgrounds = [];
     var playground = [];
     {% for playground in playgrounds %}
@@ -34,9 +40,14 @@
     {% endfor %}
     console.log(playgrounds);
   
+<<<<<<< HEAD
       
+=======
+    
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
 var geocoder;
 var map;
+//var geolocation;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
@@ -65,20 +76,29 @@ function initialize() {
     ]
     }
 ];
+
+  
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
   map.setOptions({styles: styles});
   
   var image = "{{ STATIC_URL }}marker_purple.png";
+<<<<<<< HEAD
   
     for(var i=0; i<playgrounds.length;i++){
+=======
+  for(var i=0; i<playgrounds.length;i++){
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
     var marker1 = new google.maps.Marker({
       position: new google.maps.LatLng(playgrounds[i][0],playgrounds[i][1]),
       map: map,
       icon:image,
       title:"Marker"});
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
   var marker1 = new google.maps.Marker({
       position: new google.maps.LatLng(35.91784,-79.057454),
       map: map,
@@ -89,6 +109,10 @@ function initialize() {
       map: map,
       icon:image,
       title:"Carroll"});
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
@@ -131,7 +155,11 @@ function codeAddress() {
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
+<<<<<<< HEAD
       var image = '{{ STATIC_URL }}marker_purple.png';
+=======
+      var image = "{{ STATIC_URL }}marker_purple.png";
+>>>>>>> cbb2b177efb1e14818e42762aa19148b8763b94b
       var purpleMarker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,

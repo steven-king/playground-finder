@@ -1,0 +1,135 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 0,
+            "Name": "Lydia Charles",
+            "Description": "Adipisicing ea velit esse ad dolore eiusmod qui occaecat deserunt. Reprehenderit reprehenderit ex proident aliquip qui tempor ullamco. Qui aute aliqua minim amet esse veniam eiusmod nostrud. Excepteur non labore magna reprehenderit voluptate occaecat voluptate. Proident dolor excepteur ad aliqua exercitation consectetur consectetur dolore proident deserunt. Esse irure consequat et eiusmod.\r\n",
+            "Zipcode": 27539,
+            "Age": 31,
+            "isWorkingMom": false,
+            "isWorkingDad": true,
+            "isStayMom": false,
+            "isStayDad": true,
+            "isGrandma": true,
+            "isOther": false,
+            "FavoritesID": 0,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 1,
+            "Name": "Tricia Whitney",
+            "Description": "Irure mollit laborum sint reprehenderit dolore et velit velit ex eiusmod. Elit velit commodo adipisicing aute. Sit do est aliquip id. Adipisicing deserunt non est voluptate minim laboris proident. Labore tempor id consequat voluptate est. Pariatur eiusmod tempor quis nulla ullamco pariatur mollit do ea tempor ut.\r\n",
+            "Zipcode": 27573,
+            "Age": 27,
+            "isWorkingMom": false,
+            "isWorkingDad": false,
+            "isStayMom": false,
+            "isStayDad": true,
+            "isGrandma": false,
+            "isOther": false,
+            "FavoritesID": 1,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 2,
+            "Name": "Hollie Solis",
+            "Description": "Aute eiusmod dolor id non culpa sunt amet velit voluptate reprehenderit laboris. Non amet culpa tempor minim laborum pariatur ullamco proident exercitation esse eu fugiat. Laborum pariatur adipisicing sunt ipsum do irure elit nisi. Esse pariatur veniam mollit laboris cupidatat magna excepteur aliqua nulla labore exercitation non aliqua. Non enim veniam consectetur minim labore ad consectetur amet et aliqua adipisicing. Cupidatat anim dolore Lorem nulla magna esse.\r\n",
+            "Zipcode": 27577,
+            "Age": 25,
+            "isWorkingMom": true,
+            "isWorkingDad": false,
+            "isStayMom": true,
+            "isStayDad": false,
+            "isGrandma": true,
+            "isOther": false,
+            "FavoritesID": 2,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 3,
+            "Name": "Perkins Cross",
+            "Description": "Officia non do dolor mollit consectetur eiusmod nisi consequat consectetur amet consectetur duis mollit labore. Pariatur velit ea nisi mollit velit qui nisi aliquip incididunt esse ex mollit consequat. Eu eiusmod qui non aute adipisicing cupidatat. Deserunt ut velit nostrud ea commodo commodo. Minim nisi exercitation non nostrud incididunt adipisicing. Sint ex id qui proident consequat culpa ex labore sit aute aliquip nostrud est.\r\n",
+            "Zipcode": 27548,
+            "Age": 40,
+            "isWorkingMom": true,
+            "isWorkingDad": true,
+            "isStayMom": false,
+            "isStayDad": true,
+            "isGrandma": true,
+            "isOther": true,
+            "FavoritesID": 3,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 4,
+            "Name": "Kendra Burris",
+            "Description": "Sit sint aliqua incididunt commodo nulla id adipisicing ea sit aliquip ad. Est esse incididunt magna laborum sint sit elit labore. Cillum excepteur consequat exercitation laboris anim reprehenderit et excepteur. Minim consectetur consectetur pariatur aliquip nostrud dolore laborum deserunt duis incididunt eu nostrud sit amet. Cupidatat minim sit pariatur esse voluptate cupidatat ullamco excepteur labore elit.\r\n",
+            "Zipcode": 27570,
+            "Age": 38,
+            "isWorkingMom": false,
+            "isWorkingDad": false,
+            "isStayMom": false,
+            "isStayDad": false,
+            "isGrandma": true,
+            "isOther": true,
+            "FavoritesID": 4,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 5,
+            "Name": "Kirk Rocha",
+            "Description": "Exercitation Lorem ad sint magna incididunt fugiat tempor qui commodo officia. Officia adipisicing reprehenderit mollit quis magna laboris ex in deserunt aute consequat et aute. Amet fugiat pariatur laborum cupidatat sint et dolor dolore est laborum adipisicing proident dolor deserunt.\r\n",
+            "Zipcode": 27560,
+            "Age": 35,
+            "isWorkingMom": false,
+            "isWorkingDad": true,
+            "isStayMom": false,
+            "isStayDad": false,
+            "isGrandma": false,
+            "isOther": false,
+            "FavoritesID": 5,
+            "Image": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "playgroundApp.User",
+        "fields": {
+            "UserID": 6,
+            "Name": "Christensen Witt",
+            "Description": "Mollit dolore ullamco enim nostrud dolore commodo minim ex non est cupidatat mollit. Anim consectetur velit cupidatat non. Consectetur consectetur ad nostrud non officia incididunt cillum aliquip. Incididunt duis et elit amet qui officia pariatur ea aute officia. Est ex in sunt laboris cillum eu ad cillum nulla adipisicing nisi dolore non.\r\n",
+            "Zipcode": 27572,
+            "Age": 34,
+            "isWorkingMom": true,
+            "isWorkingDad": false,
+            "isStayMom": false,
+            "isStayDad": true,
+            "isGrandma": true,
+            "isOther": true,
+            "FavoritesID": 6,
+            "Image": "http://placehold.it/32x32"
+        }
+    }
+]

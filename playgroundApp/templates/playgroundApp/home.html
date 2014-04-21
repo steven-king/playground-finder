@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row opening-screen">
+    
+<div class="opening-text">
+<div class="col-md-6 col-md-offset-3 opening-text" style="min-height: 100%">
+    <center>
+        <h1 class="project-title">Find N' Play</h1>
+        <h4>Find, contribute and explore playgrounds in the Durham/Chapel Hill area.</h4>
+        <a href="{{ TEMPLATE_DIRS }}/#find"><button type="button" class="btn btn-info main-buttons">Find A Playground</button></a><br>
+        <a href="{{ TEMPLATE_DIRS }}playgroundapp/playground_suggest"><button type="button" class="btn btn-warning main-buttons">Add A Playground</button></a>
+    </center>
+</div>
+</div><!--end opening text-->
+</div><!--end title row-->
+
+
+<div class="container">
+<a id="find"></a>
+<div class="row">
+<h1>Find a PLayground</h1>
+<div class="col-md-5 left-info">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="search" style="border: 1px solid #000; border-right: none;">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" style="background-color: hsla(58, 100%, 75%, 0.2); border: 1px solid #000; border-left: none;"><span class="glyphicon glyphicon-search" style="color: hsla(174, 94%, 31%, 0.5);"></span></button>
+        </span>
+    </div><!-- /input-group -->    
+    
+    <div class="hidden-md hidden-lg mobile-map">
+    <!--<iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none; padding: 0; margin: 0;">
+        
+    </iframe>-->
+    </div> <!-- end mobile map-->
+    
+    <div class="table-div" style="max-height: 250px; overflow-y: scroll; margin: 20px inherit;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+            <tr>
+                <td>Chapel Hill-Carrboro YMCA</td>
+                <td>980 Martin Luther King Dr.</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    <div class="panel-group hidden-sm hidden-xs" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Features
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <form action="">
+                    <input type="checkbox" name="feature" value="Bike">Feature One<br>
+                    <input type="checkbox" name="feature" value="Car">Feature Two 
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                Transportation
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <form action="">
+                    <input type="checkbox" name="transportation" value="Bike">Feature One<br>
+                    <input type="checkbox" name="transportation" value="Car">Feature Two 
+                </form>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    
+</div><!--end list column-->
+<div class="col-md-7 right-map">
+    <!--<iframe class="container well" src="{{ TEMPLATE_DIRS }}playgroundapp/map" style="width: 100%; min-height: 100%; border: none; padding: 0; margin: 0;">
+        
+    </iframe>-->
+    <div class="container well" style="width: 100%; height: 500px; border: none; padding: 0; margin: 0;">
+    {% include "playgroundapp/map.html" %}
+    </div>
+</div>
+</div><!--end list detail and map row-->
+
+
+{% endblock %}
+
+</div><!--end div container-->

@@ -1,0 +1,56 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 0,
+            "ProximityToHighway": 5,
+            "Fenced": true
+        }
+    },
+    {
+        "pk": 2,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 1,
+            "ProximityToHighway": 5,
+            "Fenced": false
+        }
+    },
+    {
+        "pk": 3,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 2,
+            "ProximityToHighway": 9,
+            "Fenced": true
+        }
+    },
+    {
+        "pk": 4,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 3,
+            "ProximityToHighway": 3,
+            "Fenced": false
+        }
+    },
+    {
+        "pk": 5,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 4,
+            "ProximityToHighway": 3,
+            "Fenced": false
+        }
+    },
+    {
+        "pk": 6,
+        "model": "playgroundApp.SafetyFeatures",
+        "fields": {
+            "PlaygroundID": 5,
+            "ProximityToHighway": 9,
+            "Fenced": true
+        }
+    }
+]

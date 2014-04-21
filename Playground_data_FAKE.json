@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "model": "playgroundApp.Playground",
+        "fields": {
+            "PlaygroundID": 1,
+            "Name": "Burch Avenue Park",
+            "Street": "816 Burch Ave",
+            "Zipcode": 27701,
+            "Handicap": true,
+            "AgeID": 1,
+            "SchoolDistrictID": 2,
+            "Hours": "Dawn to dusk",
+            "FeaturesID": 0,
+            "Image": "http://placehold.it/32x32",
+            "SafetyFeaturesID": 2,
+            "TransportFeaturesID": 1,
+            "GeoCoordinateLat": 40.751614,
+            "GeoCoordinateLon": -84.111874,
+        }
+    },
+    {
+        "pk": 2,
+        "model": "playgroundApp.Playground",
+        "fields": {
+            "PlaygroundID": 2,
+            "Name": "Orange United Methodist Church",
+            "Street": "1220 Martin Luther King Jr. Blvd",
+            "Zipcode": 27530,
+            "Handicap": false,
+            "AgeID": 1,
+            "SchoolDistrictID": 1,
+            "Hours": "Dawn to dusk",
+            "FeaturesID": 1,
+            "Image": "http://placehold.it/32x32",
+            "SafetyFeaturesID": 2,
+            "TransportFeaturesID": 1,
+            "GeoCoordinateLat": 35.948489,
+            "GeoCoordinateLon": -79.057834,
+        }
+    },
+    {
+        "pk": 3,
+        "model": "playgroundApp.Playground",
+        "fields": {
+            "PlaygroundID": 2,
+            "Name": "Holt St Park",
+            "Street": "411 W. Holt St",
+            "Zipcode": 27307,
+            "Handicap": false,
+            "AgeID": 1,
+            "SchoolDistrictID": 3,
+            "Hours": "Dawn to dusk",
+            "FeaturesID": 0,
+            "Image": "http://placehold.it/32x32",
+            "SafetyFeaturesID": 2,
+            "TransportFeaturesID": 1,
+            "GeoCoordinateLat": 36.096117,
+            "GeoCoordinateLon": -79.273498,
+        }
+    }
+]
